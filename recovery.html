@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recovery | African Foods Company</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#content">Skip to content</a>
+<div class="top-line"></div>
+
+<header class="site-header">
+    <div class="nav-wrap">
+        <a class="logo" href="index.html">
+            <span>AF.</span>African Foods
+        </a>
+
+        <nav aria-label="Main menu">
+            <a href="index.html">Home</a>
+            <a href="roles.html">Our Team</a>
+            <a href="security.html">Security</a>
+            <a href="acceptable-use.html">Acceptable Use</a>
+            <a href="acquisition.html">Purchasing</a>
+            <a href="service-desk.html">Help Desk</a>
+            <a href="recovery.html" class="active">Recovery</a>
+            <a href="references.html">Sources</a>
+        </nav>
+    </div>
+</header>
+
+<main id="content" class="container">
+
+<section class="hero">
+    <span class="eyebrow">
+        AFC Recovery Proposal • Business Continuity
+    </span>
+
+    <h1>Disaster Recovery Plans</h1>
+
+    <p>
+        A practical guide for restoring important systems
+        and keeping orders and shipping work organised
+        when something goes wrong.
+    </p>
+</section>
+
+<section class="section">
+
+    <h2>What Needs to Be Recovered First?</h2>
+
+    <p>
+        A Recovery Time Objective (RTO) is the target
+        time to restore a service. A Recovery Point
+        Objective (RPO) is the maximum planned period
+        of recent data that may need to be recovered
+        or re-entered.
+    </p>
+
+    <p>
+        The following are proposed targets,
+        not results from actual recovery tests.
+    </p>
+
+    <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Service</th>
+                    <th>Proposed RTO</th>
+                    <th>Proposed RPO</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Failed branch WAN link</td>
+                    <td>1 hour</td>
+                    <td>Not applicable to transit traffic</td>
+                </tr>
+
+                <tr>
+                    <td>Central DHCP and DNS</td>
+                    <td>2 hours</td>
+                    <td>24 hours of configuration changes</td>
+                </tr>
+
+                <tr>
+                    <td>Core business database</td>
+                    <td>
+                        4 hours for local failure /
+                        8 hours for site loss
+                    </td>
+                    <td>1 hour</td>
+                </tr>
+
+                <tr>
+                    <td>Payroll</td>
+                    <td>8 hours; review near payday</td>
+                    <td>4 hours</td>
+                </tr>
+
+                <tr>
+                    <td>Company working files</td>
+                    <td>8 hours</td>
+                    <td>4 hours</td>
+                </tr>
+
+                <tr>
+                    <td>Customer website and staff portal</td>
+                    <td>24 hours</td>
+                    <td>Last approved release</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section class="section">
+
+    <h2>Recovery Procedures for Common Problems</h2>
+
+    <p>
+        Click a situation below to expand its
+        response plan. These sections work
+        using HTML and CSS only.
+    </p>
+
+    <details>
+        <summary>1. Power Failure at a Branch</summary>
+        <div>
+            <ol>
+                <li>
+                    The branch lead checks staff safety
+                    and reports the outage.
+                </li>
+                <li>
+                    IT checks whether network equipment
+                    is supported by UPS power.
+                </li>
+                <li>
+                    Urgent orders are recorded manually
+                    if systems cannot be used.
+                </li>
+                <li>
+                    After power returns, IT verifies
+                    network access, order lookup and printing.
+                </li>
+            </ol>
+        </div>
+    </details>
+
+    <details>
+        <summary>2. Internet or VPN Connection Failure</summary>
+        <div>
+            <ol>
+                <li>
+                    IT checks router, firewall, VPN
+                    and service provider status.
+                </li>
+                <li>
+                    Switch to an approved secondary
+                    connection if available.
+                </li>
+                <li>
+                    Test the VPN, Cape Town business
+                    application and employee connectivity.
+                </li>
+                <li>
+                    Record the outage and return to
+                    the main link in a controlled window.
+                </li>
+            </ol>
+        </div>
+    </details>
+
+    <details>
+        <summary>3. Cape Town Business Server Failure</summary>
+        <div>
+            <ol>
+                <li>
+                    The specialist checks hardware
+                    and application status and keeps useful logs.
+                </li>
+                <li>
+                    Restore the latest validated backup
+                    to suitable hardware.
+                </li>
+                <li>
+                    If necessary, management may authorise
+                    the proposed Durban recovery host.
+                </li>
+                <li>
+                    Stock and finance employees check
+                    sample orders and data before reopening
+                    the service to everyone.
+                </li>
+            </ol>
+        </div>
+    </details>
+
+    <details>
+        <summary>4. Ransomware or Account Compromise</summary>
+        <div>
+            <ol>
+                <li>
+                    Disconnect affected devices
+                    and report the incident promptly.
+                </li>
+                <li>
+                    IT isolates compromised accounts
+                    and preserves investigation evidence.
+                </li>
+                <li>
+                    The specialist rebuilds and restores
+                    only from verified clean backups.
+                </li>
+                <li>
+                    The Information Officer and Legal
+                    Officer assess personal-information
+                    notification requirements.
+                </li>
+            </ol>
+        </div>
+    </details>
+
+    <details>
+        <summary>5. Accidental Deletion or Damaged Records</summary>
+        <div>
+            <ol>
+                <li>
+                    Report the missing or incorrect records
+                    and when they were last seen.
+                </li>
+                <li>
+                    Prevent further changes to affected
+                    data where necessary.
+                </li>
+                <li>
+                    Restore a backup to a separate
+                    test location first.
+                </li>
+                <li>
+                    The data owner checks the records
+                    and identifies transactions to re-enter.
+                </li>
+            </ol>
+        </div>
+    </details>
+
+    <details>
+        <summary>6. Fire, Flooding or Loss of Cape Town Premises</summary>
+        <div>
+            <ol>
+                <li>
+                    Follow the site evacuation procedure.
+                    Staff safety comes first.
+                </li>
+                <li>
+                    Senior management authorises
+                    alternate-site operation.
+                </li>
+                <li>
+                    Restore the key application using
+                    protected offsite backups and the
+                    proposed Durban recovery capacity.
+                </li>
+                <li>
+                    Branches test access, reconcile
+                    manual orders and report any gaps.
+                </li>
+            </ol>
+        </div>
+    </details>
+
+    <details>
+        <summary>7. Lost Laptop or Stolen Login Details</summary>
+        <div>
+            <ol>
+                <li>
+                    The employee phones IT with the
+                    device asset tag and last known time.
+                </li>
+                <li>
+                    IT disables access, revokes sessions
+                    and assesses possible information exposure.
+                </li>
+                <li>
+                    Prepare a replacement device only
+                    after identity verification.
+                </li>
+                <li>
+                    Record the loss and follow up
+                    on protective actions.
+                </li>
+            </ol>
+        </div>
+    </details>
+
+    <details>
+        <summary>8. Customer Website or Staff Portal Unavailable</summary>
+        <div>
+            <ol>
+                <li>
+                    Check the hosting, network and
+                    website files to locate the fault.
+                </li>
+                <li>
+                    Restore the previous approved
+                    static version if necessary.
+                </li>
+                <li>
+                    Test navigation links and verify
+                    published policy versions.
+                </li>
+                <li>
+                    Use an approved offline copy of
+                    policies until access returns.
+                </li>
+            </ol>
+        </div>
+    </details>
+
+</section>
+
+<section class="section">
+    <h2>Backups and Recovery Testing</h2>
+
+    <div class="two-col">
+
+        <div class="panel">
+            <h3>Proposed Backup Approach</h3>
+
+            <ul>
+                <li>
+                    Keep production data, a separate
+                    local backup and protected offsite copies.
+                </li>
+                <li>
+                    Use a supported database-consistent
+                    backup method and regularly test restores.
+                </li>
+                <li>
+                    Save approved network configurations
+                    after changes.
+                </li>
+                <li>
+                    Keep the current and two previous
+                    approved website releases.
+                </li>
+            </ul>
+        </div>
+
+        <div class="panel">
+            <h3>Testing and Improvement</h3>
+
+            <ul>
+                <li>
+                    <strong>Monthly:</strong>
+                    Restore sample files or database records.
+                </li>
+                <li>
+                    <strong>Quarterly:</strong>
+                    Test application recovery and branch WAN fallback.
+                </li>
+                <li>
+                    <strong>Annually:</strong>
+                    Rehearse a full Cape Town site-loss scenario.
+                </li>
+                <li>
+                    <strong>After Every Incident:</strong>
+                    Record actual times, problems and improvements.
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<div class="notice">
+    <strong>Important:</strong>
+    This page describes proposed disaster recovery plans.
+    No real African Foods recovery test is claimed.
+    Actual results must be recorded after practical
+    testing and management approval.
+</div>
+
+</main>
+
+<footer class="site-footer">
+    <strong>African Foods Company (Ltd)</strong>
+    <p>Disaster Recovery and Business Continuity</p>
+    <p>© 2026 African Foods | Group Assignment Website</p>
+    <a href="index.html">Back to Home</a>
+</footer>
+
+</body>
+</html>
